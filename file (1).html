@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <!-- 🧭 METADATI E TITOLO DELLA PAGINA -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequency Generation — Rigenerazione e Consapevolezza</title>
+
+  <!-- 🎨 SEZIONE CSS: STILE + FILIGRANA + PROTEZIONE -->
+  <style>
+    /* Impedisce selezione del testo e trascinamento immagini */
+    body {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      font-family: Arial, sans-serif;
+    }
+
+    img {
+      -webkit-user-drag: none;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    /* Contenitore del logo per filigrana */
+    .logo-container {
+      position: relative;
+      display: inline-block;
+      pointer-events: none;
+    }
+
+    .logo-container img {
+      width: 250px;
+      height: auto;
+    }
+
+    /* 🔒 Filigrana sopra logo */
+    .logo-container::after {
+      content: "© Frequency Generation";
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      color: rgba(255, 255, 255, 0.7);
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 3px 8px;
+      border-radius: 3px;
+      font-size: 13px;
+      pointer-events: none;
+    }
+  </style>
+
+  <!-- 🧱 SEZIONE SCRIPT: BLOCCO COPIA, CLICK DESTRO, ISPEZIONE -->
+  <script>
+    // Disattiva menu tasto destro
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    // Blocca scorciatoie per ispezione/salvataggio
+    document.addEventListener('keydown', function(e) {
+      if (
+        e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'p') ||
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J'))
+      ) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <!-- 🌟 LOGO CON PROTEZIONE E FILIGRANA -->
+  <header style="text-align:center; margin-top:20px;">
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo Frequency Generation">
+    </div>
+    <h1>Frequency Generation</h1>
+    <p>Metodologie di rigenerazione e consapevolezza</p>
+  </header>
+
+  <!-- 🌿 CONTENUTO ORIGINALE DELLA TUA PAGINA -->
+  <main>
+    <section id="intro">
+      <h2>Un luogo di Risveglio</h2>
+      <p>Frequency Generation nasce per accompagnare l'essere umano in un percorso di risveglio interiore. Attraverso tecniche vibrazionali, pratiche energetiche e meditazioni guidate, sosteniamo ogni individuo nel ritrovare armonia profonda — con sé stesso, con il proprio corpo e con il mondo.</p>
+    </section>
+
+    <section id="servizi">
+      <h2>I Nostri Servizi</h2>
+      <p>Bilanciamento dei centri energetici, frequenze vibrazionali, meditazione guidata, rilassamento profondo, armonizzazione sonora e percorsi di crescita personale.</p>
+    </section>
+
+    <section id="chi-siamo">
+      <h2>Chi Siamo</h2>
+      <p>Siamo guide nel cammino del risveglio interiore, unendo saperi antichi e sensibilità contemporanea. Ogni sessione è uno spazio sacro dove il cambiamento diventa possibile.</p>
+    </section>
+
+    <section id="contatti">
+      <h2>Contatti</h2>
+      <ul style="list-style:none; padding:0;">
+        <li><strong>Indirizzo:</strong> Via della Vibrazione 12, 25100 Brescia</li>
+        <li><strong>Telefono:</strong> +39 030 000 0000</li>
+        <li><strong>Email:</strong> info@frequencygeneration.it</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer style="text-align:center; margin-top:40px; font-size:14px; color:#444;">
+    © 2026 Frequency Generation — Tutti i diritti riservati
+  </footer>
+</body>
+</html>
